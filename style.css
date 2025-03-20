@@ -1,0 +1,43 @@
+/* Profile Image - Circular */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    color: #4CAF50;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer .social-links {
+    justify-content: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
