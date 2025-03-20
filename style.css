@@ -46,10 +46,6 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -98,17 +94,23 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+.profile-info p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
 /* ====== Social Links ====== */
 .social-links {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     margin-top: 1rem;
 }
 
 .social-link {
     color: #4CAF50;
-    font-size: 24px;
+    font-size: 30px;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .social-link:hover {
