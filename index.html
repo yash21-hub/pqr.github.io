@@ -38,7 +38,7 @@
             <h2>Yash Farke</h2>
             <p>Studying at MIT Academy of Engineering</p>
             <p>Passionate about Digital Marketing and Technology.</p>
-            <p>Contact : yash@instantotp.shop</p>
+            <p>Contact : <a href="mailto:yash@instantotp.shop">yash@instantotp.shop</a></p>
             <div class="social-links">
                 <a href="https://www.instagram.com/yashfarke/" target="_blank" class="social-link">
                     <i class="fab fa-instagram"></i>
@@ -47,7 +47,7 @@
                     <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://github.com/yash21-hub" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
         </div>
@@ -71,7 +71,6 @@
                 <h3>💻 Learning about New Tech</h3>
                 <p>Exploring the latest tech trends and innovations.</p>
             </div>
-            
         </div>
     </div>
 </section>
@@ -122,17 +121,6 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out to me through my social media or GitHub!</p>
         <p><a href="mailto:yash@instantotp.shop">yash@instantotp.shop</a></p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/yashfarke/" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/yash21-hub" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
     </div>
 </section>
 
@@ -140,19 +128,25 @@
 <footer>
     <div class="container">
         <p>© 2025 Yash Farke. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/yashfarke/" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/yash21-hub" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
     </div>
 </footer>
+
+<!-- ====== BACK TO TOP BUTTON ====== -->
+<button id="backToTop" onclick="scrollToTop()">⬆️</button>
+<script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.onscroll = () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
 
 </body>
 </html>
