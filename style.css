@@ -1,4 +1,4 @@
-/* ====== General Styles ====== */
+/* ===== General Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -7,25 +7,28 @@
 }
 
 body {
-    background-color: #F4F6F8;
-    color: #333;
+    background-color: #ECEFF1;
+    color: #263238;
 }
 
-/* ====== Container ====== */
+/* ===== Container ===== */
 .container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* ====== Navigation Bar ====== */
+/* ===== Navigation Bar ===== */
 nav {
-    background-color: #1E88E5;
-    padding: 1rem 0;
+    background-color: #00796B;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
 }
 
 nav h1 {
-    color: #fff;
+    color: #FFFFFF;
+    font-size: 1.8rem;
 }
 
 nav ul {
@@ -35,71 +38,52 @@ nav ul {
 }
 
 nav ul li a {
+    color: #FFFFFF;
     text-decoration: none;
-    color: #ffffff;
 }
 
-nav ul li a:hover {
-    color: #0D47A1;
-}
-
-/* ====== Section Styling ====== */
+/* ===== Section ===== */
 .section {
     padding: 3rem 0;
 }
 
-/* ====== Profile Section ====== */
+/* ===== Profile Section ===== */
 .profile {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
     border-radius: 50%;
 }
 
 .profile-info h2 {
-    color: #1E88E5;
+    color: #00796B;
 }
 
-/* ====== Hobbies and Projects ====== */
-.hobby-list, .project-list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
+/* ===== Cards ===== */
 .hobby-card, .project-card {
-    background: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 12px;
 }
 
-.project-link {
-    color: #1E88E5;
-    text-decoration: none;
-}
-
-.project-link:hover {
-    color: #0D47A1;
-}
-
-/* ====== Academics Section ====== */
-.academic-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
+/* ===== Table ===== */
 .academic-table th {
-    background: #1E88E5;
-    color: #fff;
+    background-color: #00796B;
+    color: #FFFFFF;
 }
 
-/* ====== Footer ====== */
+/* ===== Footer ===== */
 footer {
+    background-color: #00796B;
+    color: #FFFFFF;
     text-align: center;
     padding: 1rem;
-    background-color: #E0E0E0;
 }
