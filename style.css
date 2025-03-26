@@ -242,3 +242,37 @@ footer .social-link {
 footer .social-link:hover {
     color: #388E3C;
 }
+/* ====== Certifications Section ====== */
+.certification-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.certification-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+}
+
+.certification-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.certification-link:hover {
+    color: #388E3C;
+}
+
