@@ -1,14 +1,37 @@
-/* ====== General Styles ====== */
+/* ====== Global Styles ====== */
+:root {
+    /* Light Mode Colors */
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #00bcd4;
+    --secondary-color: #008ba3;
+    --accent-color: #e0f7fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode Colors */
+        --background-color: #121212;
+        --text-color: #f0f0f0;
+        --primary-color: #00e5ff;
+        --secondary-color: #00bcd4;
+        --accent-color: #263238;
+        --shadow-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -21,9 +44,9 @@ body {
 
 /* ====== Navigation Bar ====== */
 nav {
-    background-color: #fff;
+    background-color: var(--accent-color);
     padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -37,7 +60,7 @@ nav .container {
 
 nav h1 {
     font-size: 1.8rem;
-    color: #4CAF50;
+    color: var(--primary-color);
 }
 
 nav ul {
@@ -48,15 +71,15 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     padding: 8px 12px;
-    transition: color 0.3s ease;
     border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
@@ -70,15 +93,10 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: #fff;
+    background-color: var(--accent-color);
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.profile:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .profile-img {
@@ -86,17 +104,17 @@ nav ul li a:hover {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #4CAF50;
+    border: 4px solid var(--primary-color);
 }
 
 .profile-info h2 {
-    color: #4CAF50;
+    color: var(--primary-color);
     margin-bottom: 10px;
 }
 
 .profile-info p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 /* ====== Social Links ====== */
@@ -107,14 +125,13 @@ nav ul li a:hover {
 }
 
 .social-link {
-    color: #4CAF50;
+    color: var(--primary-color);
     font-size: 30px;
-    transition: color 0.3s ease;
-    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .social-link:hover {
-    color: #388E3C;
+    color: var(--secondary-color);
 }
 
 /* ====== Hobbies Section ====== */
@@ -125,10 +142,10 @@ nav ul li a:hover {
 }
 
 .hobby-card {
-    background-color: #fff;
+    background-color: var(--accent-color);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     transition: transform 0.3s ease;
     flex: 1;
     min-width: 250px;
@@ -139,7 +156,7 @@ nav ul li a:hover {
 }
 
 .hobby-card h3 {
-    color: #4CAF50;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -151,10 +168,10 @@ nav ul li a:hover {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: var(--accent-color);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     transition: transform 0.3s ease;
     flex: 1;
     min-width: 250px;
@@ -167,14 +184,14 @@ nav ul li a:hover {
 .project-link {
     display: inline-block;
     margin-top: 10px;
-    color: #4CAF50;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .project-link:hover {
-    color: #388E3C;
+    color: var(--secondary-color);
 }
 
 /* ====== Academics Section ====== */
@@ -184,49 +201,49 @@ nav ul li a:hover {
     margin-top: 1.5rem;
 }
 
-.academic-table th, .academic-table td {
+.academic-table th, 
+.academic-table td {
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--shadow-color);
     text-align: center;
 }
 
 .academic-table th {
-    background-color: #4CAF50;
+    background-color: var(--primary-color);
     color: #fff;
 }
 
 .academic-table tr:hover {
-    background-color: #f1f1f1;
+    background-color: var(--accent-color);
 }
 
-/* ====== Contact Section ====== */
-#contact p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
+/* ====== Active Project Section ====== */
+.active-project {
+    background-color: var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
 }
 
-#contact a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.active-project h3 {
+    color: var(--primary-color);
 }
 
-#contact a:hover {
-    color: #388E3C;
+.active-project:hover {
+    transform: translateY(-5px);
 }
 
 /* ====== Footer ====== */
 footer {
-    background-color: #f1f1f1;
+    background-color: var(--accent-color);
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer p {
-    color: #555;
+    color: var(--text-color);
 }
 
 footer .social-links {
@@ -235,75 +252,10 @@ footer .social-links {
 
 footer .social-link {
     font-size: 20px;
-    color: #4CAF50;
+    color: var(--primary-color);
     margin: 0 10px;
 }
 
 footer .social-link:hover {
-    color: #388E3C;
+    color: var(--secondary-color);
 }
-/* ====== Certifications Section ====== */
-.certification-list {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.certification-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    flex: 1;
-    min-width: 250px;
-}
-
-.certification-card:hover {
-    transform: translateY(-5px);
-}
-
-.certification-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.certification-link:hover {
-    color: #388E3C;
-}
-/* ====== Active Project Section ====== */
-.active-project-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.active-project-card:hover {
-    transform: translateY(-5px);
-}
-
-.active-project-card p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: #388E3C;
-}
-
