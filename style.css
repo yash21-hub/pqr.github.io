@@ -260,27 +260,3 @@ footer .social-link:hover {
     color: var(--secondary-color);
 }
 
-details {
-  background-color: var(--accent-color);
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px var(--shadow-color);
-  padding: 1rem;
-  cursor: pointer;
-}
-
-summary {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  outline: none;
-}
-
-details[open] summary {
-  margin-bottom: 0.5rem;
-}
-
-.content {
-  padding-left: 0.5rem;
-  color: var(--text-color);
-}
