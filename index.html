@@ -16,7 +16,6 @@
 </head>
 <body>
 
-
 <!-- ====== NAVIGATION BAR ====== -->
 <nav>
     <div class="container">
@@ -26,43 +25,35 @@
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#academics">Academics</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#active-project">Active Project</a></li>
             <li><a href="#certifications">Certifications</a></li>
-            <
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- ====== PROFILE SECTION ====== -->
-<section id="profile" class="section">
-    <div class="container profile">
-        <img src="https://i.ibb.co/23DXMG0Y/Screenshot-20240417-102215-Photos.jpg" alt="Profile Picture" class="profile-img">
-        <div class="profile-info">
+<!-- ====== COLLAPSIBLE SECTIONS ====== -->
+<main class="container section">
+    <details open id="profile">
+        <summary>👤 About Me</summary>
+        <div class="content">
+            <img src="https://i.ibb.co/23DXMG0Y/Screenshot-20240417-102215-Photos.jpg" alt="Profile Picture" class="profile-img">
             <h2>Yash Farke</h2>
             <p>Studying at MIT Academy of Engineering</p>
             <p>Passionate about Programming and Digital Marketing.</p>
             <p>Member of Drone Club MITAOE.🛰</p>
             <p>Contact : <a href="mailto:yash@instantotp.shop">yash@instantotp.shop</a></p>
             <div class="social-links">
-                <a href="https://www.instagram.com/yashfarke/" target="_blank" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/yash21-hub" target="_blank" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
+                <a href="https://www.instagram.com/yashfarke/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yash21-hub" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
-    </div>
-</section>
+    </details>
 
-<!-- ====== HOBBIES SECTION ====== -->
-<section id="hobbies" class="section">
-    <div class="container">
-        <h2>Hobbies</h2>
-        <div class="hobby-list">
+    <details id="hobbies">
+        <summary>🎯 Hobbies</summary>
+        <div class="content hobby-list">
             <div class="hobby-card">
                 <h3>✈️ Traveling</h3>
                 <p>Discovering new places and meeting new people.</p>
@@ -76,101 +67,79 @@
                 <p>Exploring the latest tech trends and innovations.</p>
             </div>
         </div>
-    </div>
-</section>
+    </details>
 
-<!-- ====== PROJECTS SECTION ====== -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="project-list">
+    <details id="projects">
+        <summary>💻 Projects</summary>
+        <div class="content project-list">
             <div class="project-card">
                 <h3>Hand as Mouse</h3>
                 <p>A project to use hand gestures as a mouse control using OpenCV and Python.</p>
-                <a href="https://github.com/yash21-hub/hand_as_mouse" target="_blank" class="project-link">View on GitHub</a>
-                <a href="https://youtu.be/upsbYQdAmVw" target="_blank" class="project-link">How to Use</a>
+                <a href="https://github.com/yash21-hub/hand_as_mouse" target="_blank">View on GitHub</a>
+                <a href="https://youtu.be/upsbYQdAmVw" target="_blank">How to Use</a>
             </div>
-            
             <div class="project-card">
                 <h3>Certificate Generator</h3>
                 <p>An automated tool to generate certificates for events and school using Python.</p>
-                <a href="https://github.com/yash21-hub/Certificate_generator" target="_blank" class="project-link">View on GitHub</a>
-                <a href="https://drive.google.com/file/d/1Ry0Qg5Pgq2ShBUQCYu8xPZ8o--Iom3TI/view?usp=sharing" target="_blank" class="project-link">Tutorial</a>
+                <a href="https://github.com/yash21-hub/Certificate_generator" target="_blank">View on GitHub</a>
+                <a href="https://drive.google.com/file/d/1Ry0Qg5Pgq2ShBUQCYu8xPZ8o--Iom3TI/view?usp=sharing" target="_blank">Tutorial</a>
             </div>
-            
         </div>
-    </div>
-</section>
-<!-- ====== ACTIVE PROJECT SECTION ====== -->
-<section id="active-project" class="section">
-    <div class="container">
-        <h2>Active Project</h2>
-        <div class="active-project-card">
-            <p>Running a successful website that generates income through strategic monetization and user engagement.</p>
-            <a href="https://instantotp.shop" target="_blank" class="project-link">Visit Website</a>
-        </div>
-    </div>
-</section>
+    </details>
 
-<!-- ====== CERTIFICATIONS SECTION ====== -->
-<section id="certifications" class="section">
-    <div class="container">
-        <h2>Certifications</h2>
-        <div class="certification-list">
+    <details id="active-project">
+        <summary>🚀 Active Project</summary>
+        <div class="content">
+            <p>Running a successful website that generates income through strategic monetization and user engagement.</p>
+            <a href="https://instantotp.shop" target="_blank">Visit Website</a>
+        </div>
+    </details>
+
+    <details id="certifications">
+        <summary>📜 Certifications</summary>
+        <div class="content">
             <div class="certification-card">
                 <h3>Google Digital Marketing Certification</h3>
                 <p>Certified by Google Skillshop</p>
-                <a href="https://skillshop.exceedlms.com/student/award/SeSWEF9GgWjkBoA9AUDCoE4h" target="_blank" class="certification-link">
-                    View Certificate
-                </a>
+                <a href="https://skillshop.exceedlms.com/student/award/SeSWEF9GgWjkBoA9AUDCoE4h" target="_blank">View Certificate</a>
             </div>
         </div>
-    </div>
-</section>
-<!-- ====== ACADEMICS SECTION ====== -->
-<section id="academics" class="section">
-    <div class="container">
-        <h2>Academics</h2>
-        <table class="academic-table">
-            <tr>
-                <th>Education Level</th>
-                <th>Percentage</th>
-            </tr>
-            <tr>
-                <td>10th Grade</td>
-                <td>93%</td>
-            </tr>
-            <tr>
-                <td>12th Grade</td>
-                <td>64%</td>
-            </tr>
-        </table>
-    </div>
-</section>
+    </details>
 
-<!-- ====== CONTACT SECTION ====== -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out to me through my social media or GitHub!</p>
-        <p><a href="mailto:yash@instantotp.shop">yash@instantotp.shop</a></p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/yashfarke/" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/yash21-hub" target="_blank" class="social-link">
-                <i class="fab fa-github"></i>
-            </a>
+    <details id="academics">
+        <summary>📊 Academics</summary>
+        <div class="content">
+            <table class="academic-table">
+                <tr>
+                    <th>Education Level</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td>10th Grade</td>
+                    <td>93%</td>
+                </tr>
+                <tr>
+                    <td>12th Grade</td>
+                    <td>64%</td>
+                </tr>
+            </table>
         </div>
-        <div class="container">
-<p>© 2025 Yash Farke. All Rights Reserved.</p>
+    </details>
+
+    <details id="contact">
+        <summary>📞 Contact</summary>
+        <div class="content">
+            <p>Feel free to reach out to me through my social media or GitHub!</p>
+            <p><a href="mailto:yash@instantotp.shop">yash@instantotp.shop</a></p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/yashfarke/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://in.linkedin.com/in/yash-farke-40ba71339" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yash21-hub" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p>© 2025 Yash Farke. All Rights Reserved.</p>
         </div>
-    </div>
-</section>
+    </details>
+</main>
 
-
-
-                          
+</body>
+</html>
