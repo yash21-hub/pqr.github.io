@@ -1,116 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yash Farke Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yash Farke | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <nav>
     <div class="container">
       <h1>Yash Farke</h1>
       <ul>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#active">Active Project</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="container">
-    <!-- Section Toggle Buttons -->
-    <div class="section-toggle">
-      <input type="radio" name="section" id="about" checked>
-      <label for="about">About</label>
-
-      <input type="radio" name="section" id="projects">
-      <label for="projects">Projects</label>
-
-      <input type="radio" name="section" id="hobbies">
-      <label for="hobbies">Hobbies</label>
-
-      <input type="radio" name="section" id="academics">
-      <label for="academics">Academics</label>
-
-      <input type="radio" name="section" id="active">
-      <label for="active">Active Project</label>
-
-      <input type="radio" name="section" id="contact">
-      <label for="contact">Contact</label>
-    </div>
-
-    <!-- Sections -->
-    <section class="toggle-section about-section">
-      <div class="profile">
-        <img src="https://i.ibb.co/23DXMG0Y/Screenshot-20240417-102215-Photos.jpg" alt="Profile" class="profile-img">
-        <div class="profile-info">
-          <h2>About Me</h2>
-          <p>Hey! I'm Yash Farke, a digital marketing enthusiast and tech explorer. I enjoy building engaging online experiences and growing through self-improvement every day.</p>
-          <p><strong>Certification:</strong> <a href="https://skillshop.exceedlms.com/student/award/SeSWEF9GgWjkBoA9AUDCoE4h" target="_blank">Google Digital Marketing</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="toggle-section projects-section">
+  <section id="projects" class="section">
+    <div class="container">
       <h2>Projects</h2>
       <div class="project-list">
         <div class="project-card">
-          <h3>Hand as Mouse</h3>
-          <p>Control your computer with hand gestures using OpenCV.</p>
-          <a href="https://github.com/yash21-hub/hand_as_mouse" class="project-link">View Project</a>
-        </div>
-        <div class="project-card">
           <h3>Certificate Generator</h3>
-          <p>Generates certificates automatically using Python and FPDF.</p>
-          <a href="https://github.com/yash21-hub/Certificate_generator" class="project-link">View Project</a>
+          <p>A tool to generate certificates dynamically.</p>
+          <a href="https://github.com/yash21-hub/Certificate_generator" class="project-link" target="_blank">View on GitHub</a>
+
+          <!-- Toggle for video -->
+          <input type="checkbox" id="show-video-1" class="toggle-video">
+          <label for="show-video-1" class="video-btn">▶ How to Use</label>
+
+          <!-- Embedded Video -->
+          <div class="video-container">
+            <p>This video shows how to use the certificate generator tool effectively.</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
+              title="How to Use Video" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="toggle-section hobbies-section">
-      <h2>Hobbies</h2>
-      <div class="hobby-list">
-        <div class="hobby-card"><h3>Listening to Music</h3></div>
-        <div class="hobby-card"><h3>Exploring New Tech</h3></div>
-        <div class="hobby-card"><h3>Traveling</h3></div>
-        <div class="hobby-card"><h3>Self-Improvement</h3><p>Always learning and growing to become a better version of myself, humbly.</p></div>
-      </div>
-    </section>
-
-    <section class="toggle-section academics-section">
-      <h2>Academics</h2>
-      <table class="academic-table">
-        <tr><th>Education</th><th>Institute</th><th>Percentage</th></tr>
-        <tr><td>10th</td><td>MIT Academy of Engineering</td><td>93%</td></tr>
-        <tr><td>12th</td><td>MIT Academy of Engineering</td><td>64%</td></tr>
-      </table>
-    </section>
-
-    <section class="toggle-section active-project-section">
-      <h2>Active Project</h2>
-      <div class="active-project">
-        <h3><a href="https://instantotp.shop" target="_blank">instantotp.shop</a></h3>
-        <p>Running a successful website that generates income through strategic monetization and user engagement.</p>
-      </div>
-    </section>
-
-    <section class="toggle-section contact-section">
-      <h2>Contact</h2>
-      <div class="social-links">
-        <a href="https://www.instagram.com/yashfarke/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://in.linkedin.com/in/yash-farke-40ba71339" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Yash Farke</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/yashfarke/" class="social-link"><i class="fab fa-instagram"></i></a>
-      <a href="https://in.linkedin.com/in/yash-farke-40ba71339" class="social-link"><i class="fab fa-linkedin"></i></a>
     </div>
+  </section>
+
+  <footer id="contact">
+    <p>Connect with me on:</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/yash-farke-40ba71339/" class="social-link" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/yashfarke/" class="social-link" target="_blank">Instagram</a>
+    </div>
+    <p>&copy; 2025 Yash Farke</p>
   </footer>
+
 </body>
 </html>
