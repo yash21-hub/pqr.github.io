@@ -224,3 +224,11 @@ footer .social-link {
 footer .social-link:hover {
     color: #388E3C;
 }
+
+.video-wrapper {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
