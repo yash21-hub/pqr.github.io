@@ -1,230 +1,161 @@
-/* ====== General Styles ====== */
+/* Global */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-/* ====== Container ====== */
+/* Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* ====== Navigation Bar ====== */
+/* Navbar */
 nav {
-    background-color: #fff;
-    padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav h1 {
-    font-size: 1.8rem;
-    color: #4CAF50;
+  color: #0c9;
+  font-weight: 600;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 8px 12px;
-    transition: color 0.3s ease;
-    border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #4CAF50;
-    color: #fff;
+  background: #0c9;
+  color: white;
 }
 
-/* ====== Section ====== */
+/* Sections */
 .section {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 
-/* ====== Profile Section ====== */
+/* Profile */
 .profile {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.profile:hover {
-    transform: translateY(-5px);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #4CAF50;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0c9;
 }
 
 .profile-info h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
+  color: #0c9;
+  margin-bottom: 0.5rem;
 }
 
 .profile-info p {
-    font-size: 1.1rem;
-    color: #555;
+  margin: 0.2rem 0;
 }
 
-/* ====== Social Links ====== */
+/* Social Links */
 .social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 1rem;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .social-link {
-    color: #4CAF50;
-    font-size: 30px;
-    transition: color 0.3s ease;
-    text-decoration: none;
+  font-size: 24px;
+  color: #0c9;
+  transition: color 0.3s ease;
 }
 
 .social-link:hover {
-    color: #388E3C;
+  color: #077;
 }
 
-/* ====== Hobbies Section ====== */
-.hobby-list {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+/* Cards */
+.hobby-list, .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-.hobby-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    flex: 1;
-    min-width: 250px;
+.hobby-card, .project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  transition: transform 0.3s ease;
 }
 
-.hobby-card:hover {
-    transform: translateY(-5px);
+.hobby-card:hover, .project-card:hover {
+  transform: translateY(-5px);
 }
 
-.hobby-card h3 {
-    color: #4CAF50;
-    margin-bottom: 0.5rem;
+.hobby-card h3, .project-card h3 {
+  color: #0c9;
 }
 
-/* ====== Projects Section ====== */
-.project-list {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    flex: 1;
-    min-width: 250px;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
+/* Project Links */
 .project-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  color: #0c9;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .project-link:hover {
-    color: #388E3C;
+  color: #077;
 }
 
-/* ====== Academics Section ====== */
-.academic-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-}
-
-.academic-table th, .academic-table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
-.academic-table th {
-    background-color: #4CAF50;
-    color: #fff;
-}
-
-.academic-table tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* ====== Footer ====== */
-footer {
-    background-color: #f1f1f1;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 2rem;
-}
-
-footer p {
-    color: #555;
-}
-
-footer .social-links {
-    justify-content: center;
-}
-
-footer .social-link {
-    font-size: 20px;
-    color: #4CAF50;
-    margin: 0 10px;
-}
-
-footer .social-link:hover {
-    color: #388E3C;
-}
-
+/* Embedded Video */
 .video-wrapper {
   margin-top: 1rem;
   border-radius: 12px;
@@ -232,3 +163,60 @@ footer .social-link:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.video-wrapper iframe {
+  width: 100%;
+  height: 215px;
+}
+
+/* Academics Table */
+.academic-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.academic-table th, .academic-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.academic-table th {
+  background: #0c9;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: #f1f1f1;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+footer p {
+  color: #666;
+}
+
+/* === MEDIA QUERIES FOR MOBILE === */
+@media (max-width: 768px) {
+  nav .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card, .hobby-card {
+    min-width: 100%;
+  }
+}
