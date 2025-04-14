@@ -1,50 +1,29 @@
-/* ====== Global Styles ====== */
-:root {
-    /* Light Mode Colors */
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --primary-color: #00bcd4;
-    --secondary-color: #008ba3;
-    --accent-color: #e0f7fa;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Dark Mode Colors */
-        --background-color: #121212;
-        --text-color: #f0f0f0;
-        --primary-color: #00e5ff;
-        --secondary-color: #00bcd4;
-        --accent-color: #263238;
-        --shadow-color: rgba(0, 0, 0, 0.5);
-    }
-}
-
+/* ====== General Styles ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #f9f9f9;
+    color: #333;
     line-height: 1.6;
 }
 
+/* ====== Container ====== */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* ====== Navigation Bar ====== */
 nav {
-    background-color: var(--accent-color);
+    background-color: #fff;
     padding: 1rem 0;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -58,7 +37,7 @@ nav .container {
 
 nav h1 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: #4CAF50;
 }
 
 nav ul {
@@ -69,30 +48,32 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #333;
     font-weight: 500;
     padding: 8px 12px;
+    transition: color 0.3s ease;
     border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: var(--primary-color);
+    background-color: #4CAF50;
     color: #fff;
 }
 
+/* ====== Section ====== */
 .section {
     padding: 4rem 0;
 }
 
+/* ====== Profile Section ====== */
 .profile {
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color: var(--accent-color);
+    background-color: #fff;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 12px var(--shadow-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .profile-img {
@@ -100,19 +81,20 @@ nav ul li a:hover {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--primary-color);
+    border: 4px solid #4CAF50;
 }
 
 .profile-info h2 {
-    color: var(--primary-color);
+    color: #4CAF50;
     margin-bottom: 10px;
 }
 
 .profile-info p {
     font-size: 1.1rem;
-    color: var(--text-color);
+    color: #555;
 }
 
+/* ====== Social Links ====== */
 .social-links {
     display: flex;
     gap: 15px;
@@ -120,54 +102,77 @@ nav ul li a:hover {
 }
 
 .social-link {
-    color: var(--primary-color);
+    color: #4CAF50;
     font-size: 30px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
     text-decoration: none;
 }
 
 .social-link:hover {
-    color: var(--secondary-color);
+    color: #388E3C;
 }
 
-.hobby-list, .project-list {
+/* ====== Hobbies Section ====== */
+.hobby-list {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-.hobby-card, .project-card, .active-project {
-    background-color: var(--accent-color);
+.hobby-card {
+    background-color: #fff;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     flex: 1;
     min-width: 250px;
 }
 
-.hobby-card:hover, .project-card:hover, .active-project:hover {
+.hobby-card:hover {
     transform: translateY(-5px);
 }
 
-.hobby-card h3, .project-card h3, .active-project h3 {
-    color: var(--primary-color);
+.hobby-card h3 {
+    color: #4CAF50;
     margin-bottom: 0.5rem;
+}
+
+/* ====== Projects Section ====== */
+.project-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-link {
     display: inline-block;
     margin-top: 10px;
-    color: var(--primary-color);
+    color: #4CAF50;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .project-link:hover {
-    color: var(--secondary-color);
+    color: #388E3C;
 }
 
+/* ====== Academics Section ====== */
 .academic-table {
     width: 100%;
     border-collapse: collapse;
@@ -176,28 +181,29 @@ nav ul li a:hover {
 
 .academic-table th, .academic-table td {
     padding: 12px;
-    border: 1px solid var(--shadow-color);
+    border: 1px solid #ddd;
     text-align: center;
 }
 
 .academic-table th {
-    background-color: var(--primary-color);
+    background-color: #4CAF50;
     color: #fff;
 }
 
 .academic-table tr:hover {
-    background-color: var(--accent-color);
+    background-color: #f1f1f1;
 }
 
+/* ====== Footer ====== */
 footer {
-    background-color: var(--accent-color);
+    background-color: #f1f1f1;
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
 }
 
 footer p {
-    color: var(--text-color);
+    color: #555;
 }
 
 footer .social-links {
@@ -206,29 +212,10 @@ footer .social-links {
 
 footer .social-link {
     font-size: 20px;
-    color: var(--primary-color);
+    color: #4CAF50;
     margin: 0 10px;
 }
 
 footer .social-link:hover {
-    color: var(--secondary-color);
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px var(--shadow-color);
-    margin-top: 1rem;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+    color: #388E3C;
 }
